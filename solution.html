@@ -3,45 +3,15 @@
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no"
-    />
-    <meta
-      name="description"
-      content="confence,event,conference,company,meetup,business,agency,startup,sass,responsive,modern,speaker,multpage,onepage,it,business"
-    />
-
-    <meta name="author" content="Themefisher" />
 
     <title>Web Wizard | INVENTO</title>
-    <link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
 
-
-    <!-- Mobile Specific Meta-->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Favicon -->
-    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.html" />
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
-    <!-- Icon Css -->
-    <link rel="stylesheet" href="plugins/themefisher-font/style.css" />
-    <!-- animate.css -->
-    <link rel="stylesheet" href="plugins/animate-css/animate.css" />
-    <!-- Magnify Popup -->
-    <link
-      rel="stylesheet"
-      href="plugins/magnific-popup/dist/magnific-popup.css"
-    />
-    <!-- Slick Slider CSS -->
-    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css" />
-    <link
-      rel="stylesheet"
-      href="plugins/slick-carousel/slick/slick-theme.css"
-    />
 
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="formStyle.css">
 
     <!-- Custom Stylesheet -->
     <style>
@@ -50,63 +20,47 @@
     }
     </style>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
+    <script>
+      function validateForm() {
+        // Get form inputs
+        var hint1 = document.getElementById("hint1").value.toUpperCase();
+        var hint2 = document.getElementById("hint2").value.toUpperCase();
+        var hint3 = document.getElementById("hint3").value.toUpperCase();
+        var hint4 = document.getElementById("hint4").value.toUpperCase();
+        var hint5 = document.getElementById("hint5").value.toUpperCase();
+        // Validate inputs
+        if (
+          hint1 == "KLE" &&
+          hint2 == "INVENTO" &&
+          hint3 == "WEB" &&
+          hint4 == "WIZARD" &&
+          hint5 == "CODE FELLAS"
+        ) {
+          // download zip file
+          var fileLink = "drama-group-form.html"; // Replace with the actual relative link of your file
+
+          // Create a temporary link element to trigger the download
+          var link = document.createElement("a");
+          link.href = fileLink;
+          link.download = fileLink.substring(fileLink.lastIndexOf("/") + 1);
+          link.click();
+        } else {
+          alert("Sorry, the answer/s are wrong!");
+        }
+      }
+    </script>
+
   </head>
 
   <body id="body">
-
-    
-    <!--  preloader start -->
-    <!-- <div id="tb-preloader">
-      <div class="tb-preloader-wave"></div>
-    </div>
-    <div id="loader" class="tb-preloader" style="
-    position: fixed;
-	  width: 100%;
-	  height: 100vh;
-    size: 40px;
-	  background: #ffffff url('images/preloader/giphy.gif') no-repeat center;
-	  z-index: 999;
-    "></div>
-    <script>
-      var loader;
-
-      function loadNow(opacity) {
-          if (opacity <= 0) {
-              displayContent();
-          } else {
-              loader.style.opacity = opacity;
-              window.setTimeout(function() {
-                  loadNow(opacity - 0.1);
-              }, 10);
-          }
-          
-      }
-
-
-      function displayContent() {
-          loader.style.display = 'none';
-          document.getElementById('content').style.display = 'block';
-      }
-
-
-      document.addEventListener("DOMContentLoaded", function() {
-          loader = document.getElementById('loader');
-          window.setTimeout(function() {
-            loadNow(1);
-              // }, 6000);
-            }, 000);
-          // loader.parentNode.removeChild(loader);
-      });
-    </script> -->
-    <!-- preloader end -->
-
 
     <!-- Navigation Start -->
     <header class="header-bar">
       <nav class="navbar navbar-expand-lg main-nav fixed-top" style="background-color: #182559;">
         <div class="container">
           <!--      LOGO BAR     -->
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="index-2.html">
             <img src="images/icons/CodeFellas - Side Big.png" style="width: 180px;" alt="meetub" class="img-fluid logo-b"/>
           </a>
 
@@ -152,55 +106,31 @@
 
     <!-- Hero Section Start -->
     <section
-    id="home"
-      class="section-banner d-flex align-items-center"
-      style="background-image: url(images/banner/banner1.jpg);
+      style=" padding-bottom: 0px;
+              padding-top: 100px;
+              margin-top: 0px;
               padding-bottom: 0px;
-              padding-top: 0px;
-              margin-top: 30px;
-              padding-bottom: 0px;
+              display:flex;
+              flex-direction: column;
+              align-items: center;
               "
     >
-      <div class="container">
-        <div class="#">
-          <div style="text-align:center;">
-            <div class="banner-content">
-              <img src="images/icons/web-wizards.png" style="width: 600px; margin-top: 6rem;"></img><br>
-              <span><b></b></span>
-              <h2 style="font-size: 1.5em; margin-bottom: 3rem;" class="mt-5">SOLVE THE QUESTIONS TO CONTINUE<br><br>
+    <form hint1="myForm" onsubmit="return validateForm()">
+      <h1 style="color:#000; font-size: 32px; text-align:center;">WEBWIZARDS SOLUTION FORM</h1>
+      <p style="color:#000; font-size: 12px; text-align:center;">Submit all the correct answer to download the zip file of the page that you have to develop.</p>
+      <label for="hint1">Enter first set of letters:</label>
+      <input type="text" id="hint1" name="hint1" required /><br />
+      <label for="name">Enter second set of letters:</label>
+      <input type="text" id="hint2" name="hint2" required /><br />
+      <label for="name">Enter third set of letters:</label>
+      <input type="text" id="hint3" name="hint3" required /><br />
+      <label for="name">Enter fourth set of letters:</label>
+      <input type="text" id="hint4" name="hint4" required /><br />
+      <label for="name">Enter fifth set of letters:</label>
+      <input type="text" id="hint5" name="hint5" required /><br />
 
-                <a target="_blank" href="#"><button style="height: 40px; width: 120px; border-radius: 20px; background-color:black; color:white; font-size: 0.7em;">Question #1</button></a>
-
-                <a target="_blank" href="Loading.html"><button style="height: 40px; width: 120px; border-radius: 20px; background-color:black; color:white; font-size: 0.7em;">Question #2</button></a>
-
-                <a target="_blank" href="Clarity-master/index.html"><button style="height: 40px; width: 120px; border-radius: 20px; background-color:black; color:white; font-size: 0.7em;">Question #3</button></a>
-
-                <a target="_blank" href="Audio.mp3"><button style="height: 40px; width: 120px;border-radius: 20px; background-color:black; color:white; font-size: 0.7em;">Question #4</button></a>
-
-                <a target="_blank" href="Sundar-Pichai-The-CEO-of-google-an-artilcle-on-who-he-is-also-the-next-set-of-letters-is-%272022%27.html"><button style="height: 40px; width: 120px; border-radius: 20px; background-color:black; color:white; font-size: 0.7em;">Question #5</button></a>
-              </h2>
-
-
-
-              <h2 style="margin-top: 50px;">Hints</h2>
-            
-              <a href="#"><button onclick="alert('Debug & execute the code.');" style="border-radius: 20px; background-color:var(--color1); color:white; height: 50px; width: 100px; border-color: var(--color1);">Hint #1</button></a>
-
-              <a href="#"><button onclick="alert(`The Page is  ''not loading''  and its  ''not empty''.`);" style="border-radius: 20px; background-color:var(--color2); color:white; height: 50px; width: 100px; border-color: var(--color2);">Hint #2</button></a>
-
-              <a href="#"><button onclick="alert('Enjoy the game');" style="border-radius: 20px; background-color:var(--color3); color:white; height: 50px; width: 100px; border-color: var(--color3);">Hint #3</button></a>
-
-              <a href="#"><button onclick="alert('DLROW OLLEH');" style="border-radius: 20px; background-color:var(--color4); color:white; height: 50px; width: 100px; border-color: var(--color4);">Hint #4</button></a>
-
-              <a href="#"><button onclick="alert('Just Read Very Very Carefully');" style="border-radius: 20px; background-color:#182559; color:white; height: 50px; width: 100px; border-color: #000;">Hint #5</button></a>
-
-              <br><br>
-
-              <a href="solution.html" target="_blank" rel="noopener noreferrer" class="btn btn-hero2 btn-rounded mt-5" style=" background-color:#FCCB59; color:#182559; height: 50px; border-color: #182559;">Enter your answers here</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <input type="submit" value="Submit" class="submitButton"/>
+    </form>
     </section>
     <!-- Hero Section End -->
    
@@ -227,14 +157,12 @@
                     <li>Solve all the questions within 30 mins and you will be able to access the second part of the round early.</li>
                     <li>Everyone will be provided the website files for the second part of the round after 30 mins.</li>
                     <li>The second part consists of developing a website.</li>
-
                     <!-- <li>A program will be considered wrong if it fails to work on one or more of the test cases.</li> -->
                     <!-- <li>A correct program will be awarded the full points, and an incorrect one zero.</li> -->
-
-                    <li>The team which develops the website first with most significant match is ranked number 1 on the leader board and the next team(s) receive the immediately following ranking number.</li>
+                    <li>The team which develops the website first is ranked number 1 on the leader board and the next team(s) receive the immediately following ranking number.</li>
                 
                     <li>Internet access is allowed only for 1st round (Puzzle round).</li>
-                    <li>Internet access is not allowed for 2nd round (Website development).</li>
+                    <li>Internet access is not allowed only for 2st round (Website development).</li>
 
                     <li>Only the participants physically present will be considered for the second round. </li>
                   </ol>

@@ -1,0 +1,194 @@
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #000000;
+  --first-color-alt: hsl(0, 0%, 0%);
+  --white-color: #000000;
+  --text-color: hsl(0, 0%, 0%);
+  --text-color-light: hsl(0, 0%, 0%);
+  --body-color: hsl(22, 8%, 6%);
+  --container-color: hsl(22, 8%, 7%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Butcherman", cursive;
+
+  --biggest-font-size: 2rem;
+  --h1-font-size: 1.8rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
+
+  /*========== Font weight ==========*/
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+
+  /*========== z index ==========*/
+  --z-tooltip: 10;
+  --z-fixed: 100;
+}
+
+form {
+  width: 720px;
+  background-color: rgba(255, 255, 255, 0.03);
+  position: relative;
+  border-radius: 10px;
+  backdrop-filter: blur(15px);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+  padding: 40px 35px;
+  margin-top: 30px;
+}
+
+.qr__image {
+
+  height: 8rem;
+  width: 8rem;
+  margin-left: 3.2rem;
+  margin-right: 2rem;
+  margin-top: 2rem;
+}
+
+.upi {
+  margin-left: 1.5rem;
+
+}
+
+#upi__copy {
+  margin-top: 0.5rem;
+  background-color: #9052ad;
+  margin-left: 2.2rem;
+  width: 10rem;
+  height: 1.5rem;
+  font-size: 0.5;
+  border-radius: 10px;
+  cursor: none;
+}
+
+.loader {
+  top: 1rem;
+  right: 2rem;
+  position: absolute;
+  border: 3px solid #ffffff;
+  border-top: 3px solid #9052ad;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  animation: spin 0.6s linear infinite;
+  display: none;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.registerationForm {
+  display: flex;
+  justify-content: center;
+}
+
+form * {
+  color: #ffffff;
+  letter-spacing: 1px;
+  outline: none;
+  border: none;
+}
+
+form h3 {
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 42px;
+  text-align: center;
+}
+
+.registerationFormTitle {
+  font-size: 45px;
+  color: #9052ad;
+  font-family: "poppins";
+  font-weight: bold;
+  font-family: imfell;
+  letter-spacing: 2px;
+}
+
+label {
+  display: block;
+  margin-top: 0px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000000;
+}
+
+.collegeRadioButton {
+  display: flex;
+  align-items: center;
+}
+
+.radioButtonCustom {
+  width: 40px;
+  height: 20px;
+}
+
+option {
+  background-color: #1f1e1d;
+  color: #e1e1e1;
+  font-weight: 400;
+  padding: 20px 2px 1px;
+  font-size: 16px;
+  cursor: none;
+}
+
+input,
+.dropDown {
+  display: block;
+  height: 50px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 3px;
+  padding: 0 10px;
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 300;
+  font-family: "Poppins";
+  color: #000000;
+}
+
+::placeholder {
+  color: #e1e1e1;
+  font-family: "poppins";
+}
+
+input:hover {
+  outline: 2px solid #0001;
+}
+
+.submitButton {
+  position: relative;
+  font-family: 'poppins', serif;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  display: inline-block;
+  background-color: #ffffff;
+  padding: 1rem 1.5rem;
+  border-radius: 0.2rem;
+  color: #000000;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+  border: 2px solid black;
+}
+
+.submitButton:hover {
+  background-color: #000000;
+  color: #ffffff;
+
+  /* cursor: url(./cursor.png), pointer; */
+}

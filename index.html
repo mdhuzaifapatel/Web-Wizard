@@ -1,0 +1,371 @@
+<!--==================================-->
+<!--==Website Made by Atharva Rasane==-->
+<!--==================================-->
+<!DOCTYPE html>
+<html lang="en">
+  <!-- Mirrored from demo.themefisher.com/vixcon/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2022 06:09:52 GMT -->
+  
+<!-- Mirrored from devfestbelgaum.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Dec 2022 15:02:28 GMT -->
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="confence,event,conference,company,meetup,business,agency,startup,sass,responsive,modern,speaker,multpage,onepage,it,business"
+    />
+
+    <meta name="author" content="Themefisher" />
+
+    <title>DEVFEST BELGAUM 2022 - GOOGLE DEVELOPER GROUP BELGAUM</title>
+    <link rel="icon" type="image/x-icon" href="images/icons/favicon.png">
+
+
+    <!-- Mobile Specific Meta-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.html" />
+    <!-- bootstrap.min css -->
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
+    <!-- Icon Css -->
+    <link rel="stylesheet" href="plugins/themefisher-font/style.css" />
+    <!-- animate.css -->
+    <link rel="stylesheet" href="plugins/animate-css/animate.css" />
+    <!-- Magnify Popup -->
+    <link
+      rel="stylesheet"
+      href="plugins/magnific-popup/dist/magnific-popup.css"
+    />
+    <!-- Slick Slider CSS -->
+    <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css" />
+    <link
+      rel="stylesheet"
+      href="plugins/slick-carousel/slick/slick-theme.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Custom Stylesheet -->
+    <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    </style>
+
+  </head>
+
+  <body id="body">
+    <!--  preloader start -->
+    <div id="tb-preloader">
+      <div class="tb-preloader-wave"></div>
+    </div>
+    <div id="loader" class="tb-preloader" style="
+    position: fixed;
+	  width: 100%;
+	  height: 100vh;
+    size: 40px;
+	  background: #ffffff url('images/preloader/giphy.gif') no-repeat center;
+	  z-index: 999;
+    "></div>
+    <script>
+      var loader;
+
+      function loadNow(opacity) {
+          if (opacity <= 0) {
+              displayContent();
+          } else {
+              loader.style.opacity = opacity;
+              window.setTimeout(function() {
+                  loadNow(opacity - 0.1);
+              }, 10);
+          }
+          
+      }
+
+
+      function displayContent() {
+          loader.style.display = 'none';
+          document.getElementById('content').style.display = 'block';
+      }
+
+
+      document.addEventListener("DOMContentLoaded", function() {
+          loader = document.getElementById('loader');
+          window.setTimeout(function() {
+            loadNow(1);
+              // }, 6000);
+            }, 000);
+          // loader.parentNode.removeChild(loader);
+      });
+    </script>
+    <!-- preloader end -->
+    <!-- Navigation Start -->
+    <header class="header-bar">
+      <nav class="navbar navbar-expand-lg main-nav fixed-top" style="background-color: #ffffff;">
+        <div class="container">
+          <!--      LOGO BAR     -->
+          <a class="navbar-brand" href="index-2.html">
+            <img src="images/icons/logo-devfest.png" style="width: 150px;" alt="meetub" class="img-fluid logo-b"/>
+          </a>
+
+          <button id="collapsebtn"
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="tf-ion-android-menu"></span>
+          </button>
+
+          <!--  MAIN MENU  -->
+          <div
+            class="collapse navbar-collapse text-center"
+            id="navbarNavDropdown"
+          >
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#home" onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}">QUESTION</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#what" onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}">RULES AND INSTRUCTIONS</a>
+              </li>
+              <!-- <li class="nav-item">
+                <a class="nav-link" href="#why" onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}">WHY</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#schedule" onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}">SCHEDULE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#speakers" onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}">SPEAKERS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#sponsors" onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}">SPONSORS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#venu" onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}">VENUE</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" rel="noopener noreferrer" href="team.html" onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}">TEAM</a>
+              </li> -->
+            </ul>
+
+            <a
+              href="https://chat.whatsapp.com/CHgHyKmYqBD7h9nvO9BYzt"
+              class="btn btn-secondary btn-rounded mt-3 mt-lg-0"
+              target="_blank" 
+              rel="noopener noreferrer"
+              onclick="let t = getElementById('collapsebtn'); if (t.getAttribute('aria-expanded') == 'true'){t.click()}"
+              >ASK A QUESTION</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- Navigation End -->
+
+    <!-- Hero Section Start -->
+    <section
+    id="home"
+      class="section-banner d-flex align-items-center"
+      style="background-image: url(images/banner/banner.jpg);
+              padding-bottom: 0px;
+              padding-top: 0px;
+              margin-top: 0px;
+              padding-bottom: 0px;
+              "
+    >
+      <div class="container">
+        <div class="#">
+          <div style="text-align:center;">
+            <div class="banner-content">
+              <img src="images/icons/GDG%20BELGAUM%20Light%20Horizontal-Logo.png" style="width: 250px;"></img><br>
+              <span><b>COMPLETE THE LINK TO CONTINUE</b></span>
+              <!-- https://forms.gle/Q5s3zP9BjC3dFYuJ8 -->
+              <h2 style="font-size: 1.5em;" class="mt-3 mb-5">https://www.hackerrank.com/<br>
+                <a target="_blank" href="caeser-cipher.html"><button style="border-radius: 20px; background-color:black; color:white; font-size: 0.8em;">Question #1</button></a>
+                <a target="_blank" href="Black.png"><button style="border-radius: 20px; background-color:black; color:white; font-size: 0.8em;">Question #2</button></a>
+                <a target="_blank" href="Loading.html"><button style="border-radius: 20px; background-color:black; color:white; font-size: 0.8em;">Question #3</button></a>
+                <a target="_blank" href="Clarity-master/index.html"><button style="border-radius: 20px; background-color:black; color:white; font-size: 0.8em;">Question #4</button></a>
+                <a target="_blank" href="Audio.mp3"><button style="border-radius: 20px; background-color:black; color:white; font-size: 0.8em;">Question #5</button></a>
+                <a target="_blank" href="binary.html"><button style="border-radius: 20px; background-color:black; color:white; font-size: 0.8em;">Question #6</button></a>
+                <a target="_blank" href="Sundar-Pichai-The-CEO-of-google-an-artilcle-on-who-he-is-also-the-next-set-of-letters-is-%272022%27.html"><button style="border-radius: 20px; background-color:black; color:white; font-size: 0.8em;">Question #7</button></a>
+              </h2>
+              <h2>Hints</h2>
+              <a href="#"><button onclick="alert('Hello == Olssv');" style="border-radius: 20px; background-color:var(--color1); color:white; height: 50px; width: 100px; border-color: var(--color1);">Hint #1</button></a>
+              <a href="#"><button onclick="alert('Black text is recommended for use on light backgrounds');" style="border-radius: 20px; background-color:var(--color2); color:white; height: 50px; width: 100px; border-color: var(--color2);">Hint #2</button></a>
+              <a href="#"><button onclick="alert('The Page is not loading and its not empty');" style="border-radius: 20px; background-color:var(--color3); color:white; height: 50px; width: 100px; border-color: var(--color3);">Hint #3</button></a>
+              <a href="#"><button onclick="alert('Enjoy the game');" style="border-radius: 20px; background-color:var(--color4); color:white; height: 50px; width: 100px; border-color: var(--color4);">Hint #4</button></a>
+              <a href="#"><button onclick="alert('DLROW OLLEH');" style="border-radius: 20px; background-color:var(--color1); color:white; height: 50px; width: 100px; border-color: var(--color1);">Hint #5</button></a>
+              <a href="#"><button onclick="alert('A in binary is 01000001');" style="border-radius: 20px; background-color:var(--color2); color:white; height: 50px; width: 100px; border-color: var(--color2);">Hint #6</button></a>
+              <a href="#"><button onclick="alert('Just Read Very Very Carefully');" style="border-radius: 20px; background-color:var(--color3); color:white; height: 50px; width: 100px; border-color: var(--color3);">Hint #7</button></a>
+              <!-- <img src="images/icons/location.png" style="filter: invert(100%); width: 40px;"></img><a href="https://goo.gl/maps/DqDGRCLnYi6BVxeE8" target="_blank" rel="noopener noreferrer"><b>BELGAUM PRESIDENCY CLUB, ASHOK NAGAR, 590016</b><br></a> -->
+              <!-- <img src="images/icons/calendar.png" style="filter: invert(100%); width: 40px;"></img><a><b>SATURDAY, 10TH DECEMBER 2022</b><br></a> -->
+              <br><br>
+              <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScU2q_DCTTRqc6R7i8BaxEuSM3Azu0qz2ptfQvtDZORuYS8Eg/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-hero2 btn-rounded">REGISTER NOW</a> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Hero Section End -->
+   
+    <!-- Counter Section Start -->
+    <section id="counter" class="overflow-hidden counter-wrapper pt-4 pb-5" style=";">
+      <div class="container">
+        <div class="counter-inner">
+          <div class="row align-items-center">
+            <div class="col-lg-6">
+              <div class="counter-stat">
+                <h2 class="font-weight-light">
+                  <span class="font-weight-bold">Time Remaining</span>
+                  <br />
+                </h2>
+              </div>
+            </div>
+            <div id="simple-timer" class="syotimer"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Counter Section End -->
+
+    <!-- What Section Start -->
+    <section id="what" class="section about" style=" padding-top: 0px;">
+      <div class="container">
+        <div style="padding: 50px;">
+          <h1 style="text-align: center;">Rules And Instructions</h1>
+        </div>
+        <div class="row">
+          <div class="col-lg-12 col-md-12">
+            <div class="module-border-wrap123">
+              <div class="module234">
+                <h5 class="text-uppercase letter-spacing mb-4">
+                  Rules
+                </h5>
+                <h6 class="text-color mb-3"> Aim: Complete the link to get to the to get to the second part</h6>
+                <p class="lead">
+                  <ol>
+                    <li>The Round is of 40 minutes in total and will consist of 2 parts.</li>
+                    <li>The first part consists of solving a set of puzzles to complete the required link.</li>
+                    <li>These puzzles require you to think outside the box.</li>
+                    <li>Each puzzle will give you a part of the link complete it within 20 min and you will be able to access the second part of the round early.</li>
+                    <li>Everyone will be provided the link to the second part of the round after 20 min</li>
+                    <li>The second part consists of 2 questions on Hacker Rank.</li>
+                    <li>A program will be considered wrong if it fails to work on one or more of the test cases.</li>
+                    <li>A correct program will be awarded the full points, and an incorrect one zero.</li>
+                    <li>The participant with the highest score is ranked number 1 on the leader board and the next participant(s) receive the immediately following ranking number.</li>
+                    <li>The tiebreaker is the sum of the time of the first correct submission for all the problems.</li>
+                    <li>Internet access is allowed for this round.</li>
+                    <li>The top 12 participants will move on to the next round.</li>
+                    <li>Only the participants physically present will be considered for the second round. </li>
+                  </ol>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- What Section End -->
+    <style>
+    
+    
+      .module-border-wrap123 {
+        max-width: auto;
+        padding: 1rem;
+        position: relative;
+        background: linear-gradient(180deg,#db4437,#4285f4 32.81%,#00ab47 66.15%,#ffba00);
+        padding: 3px;
+      }
+      
+      .module234 {
+        background: white;
+        color: black;
+        padding: 2rem;
+      }
+      </style>
+    <!-- Venue Section End -->
+    <!-- Footer Section Start -->
+    <section class="footer section">
+      <div class="container">
+        <div class="row justify-content-center" style="padding-bottom: 30px;">
+          <div class="col-lg-6 text-center">
+            <img src="images/icons/GDG%20BELGAUM%20Dark%20Horizontal-Logo.png" style="width: 250px; padding-right: 20px;">
+            <img src="images/icons/logo-devfest-dark.png"  style="width: 250px">
+          </div>
+        </div>
+
+        <div class="row justify-content-center"> 
+          <div class="col-lg-6 text-center">
+            <p class="mt-3 text-white-50">Disclaimer: GDG Belgaum is an independent group; our activities and the opinions expressed here should in no way be linked to Google, the corporation. To learn more about the GDG program, visit <a href="https://developers.google.com/community/gdg" style="color: var(--color1)" target="_blank" rel="noopener noreferrer">https://developers.google.com/community/gdg</a></p>
+            <p class="text-white-50">
+              By participating in any events planned and controlled by <a style="color: var(--color1);" href="https://gdg.community.dev/gdg-belgaum/" target="_blank" rel="noopener noreferrer">GDG BELGAUM</a>, you agree to the following <a href="https://developers.google.com/community-guidelines" style="color: var(--color1)" target="_blank" rel="noopener noreferrer">Community Guidelines</a>
+            </p>
+            <p class="mt-3 text-white-50">
+              Reach out to us at: <a href="mailto:"></a>
+            </p>
+
+            <ul class="list-inline footer-socails">
+              <li class="list-inline-item">
+                <a href="https://wa.me/+916366136498" target="_blank" rel="noopener noreferrer"><i class="tf-ion-social-whatsapp" ></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="mailto:gdgbgm2022@gmail.com" target="_blank" rel="noopener noreferrer"><i class="tf-ion-android-mail" ></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.instagram.com/gdg_belgaum/" target="_blank" rel="noopener noreferrer"><i class="tf-ion-social-instagram" ></i></a>
+              </li>
+              <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/gdg-belgaum-chapter-0bb258255/" target="_blank" rel="noopener noreferrer"><i class="tf-ion-social-linkedin"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-12 text-center mt-5">
+            <p class="copy border-top pt-4 text-white-50 mb-0">
+              Designed with ❤️ by team <a style="color: var(--color1);" href="https://gdg.community.dev/gdg-belgaum/" target="_blank" rel="noopener noreferrer">GDG BELGAUM</a> 
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Footer Section End -->
+
+    <!-- 
+    Essential Scripts
+    =====================================-->
+    <!-- Main jQuery -->
+
+    <script src="plugins/jquery/jquery.js"></script>
+    <!-- Bootstrap 4.3 -->
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
+    <!--  -->
+    <script src="plugins/SyoTimer/jquery.syotimer.min.js"></script>
+
+    <!-- Form Validator -->
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.html"></script>
+    <script src="cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.html"></script>
+    <script src="plugins/easing/waypoint.js"></script>
+    <script src="plugins/easing/easing.js"></script>
+    <script src="plugins/magnific-popup/dist/jquery.magnific-popup.js"></script>
+
+    <!-- Google Map -->
+    <script src="plugins/google-map/gmap3.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDwIQh7LGryQdDDi-A603lR8NqiF3R_ycA"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+
+  <!-- Mirrored from demo.themefisher.com/vixcon/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 29 Oct 2022 06:10:12 GMT -->
+
+<!-- Mirrored from devfestbelgaum.in/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Dec 2022 15:02:36 GMT -->
+</html>

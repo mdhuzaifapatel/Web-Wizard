@@ -178,7 +178,8 @@ input:hover {
   margin-top: 1.5rem;
   display: inline-block;
   background-color: #ffffff;
-  padding: 1rem 1.5rem;
+  /* padding: 1rem 1.5rem; */
+  /* padding-top: -1rem; */
   border-radius: 0.2rem;
   color: #000000;
   font-weight: bold;

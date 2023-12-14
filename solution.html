@@ -1,70 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
-
-    <title>Web Wizards | INVENTO</title>
-
+    <title>Treasure Hunt Log</title>
     <!-- bootstrap.min css -->
     <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css" />
-
     <!-- Main Stylesheet -->
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="formStyle.css">
-
+    <link rel="stylesheet" href="formStyle.css" />
     <!-- Custom Stylesheet -->
     <style>
-    html {
-      scroll-behavior: smooth;
-    }
+      html {
+        scroll-behavior: smooth;
+      }
     </style>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.6.0/jszip.min.js"></script>
     <script>
       function validateForm() {
         // Get form inputs
-        var hint1 = document.getElementById("hint1").value.toUpperCase();
-        var hint2 = document.getElementById("hint2").value.toUpperCase();
-        var hint3 = document.getElementById("hint3").value.toUpperCase();
-        var hint4 = document.getElementById("hint4").value.toUpperCase();
-        var hint5 = document.getElementById("hint5").value.toUpperCase();
+        var hint1 = document.getElementById("hint1").value.toLowerCase();
+        var hint2 = document.getElementById("hint2").value.toLowerCase();
+        var hint3 = document.getElementById("hint3").value.toLowerCase();
+        var hint4 = document.getElementById("hint4").value.toLowerCase();
+        var hint5 = document.getElementById("hint5").value.toLowerCase();
+
         // Validate inputs
         if (
-          hint1 == "KLE" &&
-          hint2 == "INVENTO" &&
-          hint3 == "WEB" &&
-          hint4 == "WIZARD" &&
-          hint5 == "CODE FELLAS"
+          hint1 == "belief" &&
+          hint2 == "unlock" &&
+          hint3 == "mystery" &&
+          hint4 == "tcs" &&
+          hint5 == "treasure"
         ) {
           // download zip file
-          var fileLink = "assets/WEB-WIZARD-FILES.zip"; // Replace with the actual relative link of your file
-
-          // Create a temporary link element to trigger the download
-          var link = document.createElement("a");
-          link.href = fileLink;
-          link.download = fileLink.substring(fileLink.lastIndexOf("/") + 1);
-          link.click();
+          // var fileLink = ""; // Replace with the actual relative link of your file
+          // // Create a temporary link element to trigger the download
+          // var link = document.createElement("a");
+          // link.href = fileLink;
+          // link.download = fileLink.substring(fileLink.lastIndexOf("/") + 1);
+          // link.click();
+          alert("You can now proceed to Round 2");
         } else {
           alert("Sorry, the answer/s are wrong!");
         }
       }
-    </script>
 
+      function checkAnswer(inputId, correctAnswer) {
+        // Get the user's answer
+        var userAnswer = document.getElementById(inputId).value.toLowerCase();
+        // Display the result
+        var resultElement = document.getElementById(inputId + "Result");
+        var checkButton = document.getElementById(inputId + "CheckButton");
+
+        if (userAnswer === correctAnswer) {
+          resultElement.innerHTML = "CORRECT";
+          resultElement.style.color = "green";
+          checkButton.style.backgroundColor = "green";
+          alert("CORRECT!");
+        } else {
+          resultElement.innerHTML = "WRONG";
+          resultElement.style.color = "red";
+          checkButton.style.backgroundColor = "red";
+          alert("WRONG!");
+        }
+      }
+    </script>
   </head>
 
   <body id="body">
-
     <!-- Navigation Start -->
     <header class="header-bar">
-      <nav class="navbar navbar-expand-lg main-nav fixed-top" style="background-color: #182559;">
+      <nav
+        class="navbar navbar-expand-lg main-nav fixed-top"
+        style="background-color: #182559"
+      >
         <div class="container">
           <!--      LOGO BAR     -->
           <a class="navbar-brand" href="index.html">
-            <img src="images/icons/CodeFellas - Side Big.png" style="width: 180px;" alt="meetub" class="img-fluid logo-b"/>
+            <!-- <img src="images/icons/CodeFellas - Side Big.png" style="width: 180px;" alt="meetub" class="img-fluid logo-b"/> -->
+            <h4 class="treasure">Treasure Hunt - Part 1</h4>
           </a>
 
-          <button id="collapsebtn"
+          <button
+            id="collapsebtn"
             class="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -82,21 +101,24 @@
             id="navbarNavDropdown"
           >
             <ul class="navbar-nav mx-auto">
+              <!-- <li class="nav-item">
+                <a class="nav-link" style="color: #fff" href="#home" target="_blank">QUESTIONS</a>
+              </li> -->
               <li class="nav-item">
-                <a class="nav-link" style="color: #fff" href="index.html#home">QUESTIONS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" style="color: #fff" href="#what">RULES AND INSTRUCTIONS</a>
+                <a class="nav-link" style="color: #182559" href="#">.</a>
               </li>
             </ul>
 
             <a
-              href="https://chat.whatsapp.com/CTuemH4FFYLFAddj19TpBd"
+              href="#what"
               class="btn btn-secondary btn-rounded mt-3 mt-lg-0"
-              target="_blank" 
-              style="background-color: #FCCB59; color: #182559; border-color: #FCCB59;"
+              style="
+                background-color: #fccb59;
+                color: #182559;
+                border-color: #fccb59;
+              "
               rel="noopener noreferrer"
-              >ASK A QUESTION</a
+              >RULES AND INSTRUCTIONS</a
             >
           </div>
         </div>
@@ -106,36 +128,71 @@
 
     <!-- Hero Section Start -->
     <section
-      style=" padding-bottom: 0px;
-              padding-top: 100px;
-              margin-top: 0px;
-              padding-bottom: 0px;
-              display:flex;
-              flex-direction: column;
-              align-items: center;
-              "
+      style="
+        padding-bottom: 0px;
+        padding-top: 100px;
+        margin-top: 0px;
+        padding-bottom: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      "
     >
-    <form hint1="myForm" onsubmit="return validateForm()">
-      <h1 style="color:#000; font-size: 32px; text-align:center;">WEB WIZARDS SOLUTION FORM</h1>
-      <p style="color:#000; font-size: 12px; text-align:center;">Submit all the correct answer to download the zip file of the page that you have to develop.</p>
-      <label for="hint1">Enter first set of letters:</label>
-      <input type="text" id="hint1" name="hint1" required /><br />
-      <label for="name">Enter second set of letters:</label>
-      <input type="text" id="hint2" name="hint2" required /><br />
-      <label for="name">Enter third set of letters:</label>
-      <input type="text" id="hint3" name="hint3" required /><br />
-      <label for="name">Enter fourth set of letters:</label>
-      <input type="text" id="hint4" name="hint4" required /><br />
-      <label for="name">Enter fifth set of letters:</label>
-      <input type="text" id="hint5" name="hint5" required /><br />
+      <form hint1="myForm" onsubmit="return validateForm()">
+        <h1 style="color: #000; font-size: 32px; text-align: center">
+          TREASURE HUNT LOG
+        </h1>
+        <p style="color: #000; font-size: 12px; text-align: center">
+          Enter your answers here to proceed further
+        </p>
 
-      <input type="submit" value="Submit" class="submitButton"/>
-    </form>
+        <!-- Puzzle 1 -->
+        <label for="hint1">Enter first set of letters:</label>
+        <input type="text" id="hint1" name="hint1" required />
+        <button type="button" onclick="checkAnswer('hint1', 'belief')" class="checkButton">
+          Check
+        </button>
+        <span id="hint1Result"></span>
+
+        <!-- Puzzle 2 -->
+        <label for="hint2">Enter second set of letters:</label>
+        <input type="text" id="hint2" name="hint2" required />
+        <button type="button" onclick="checkAnswer('hint2', 'unlock')" class="checkButton">
+          Check
+        </button>
+        <span id="hint2Result"></span>
+
+        <!-- Puzzle 3 -->
+        <label for="hint3">Enter third set of letters:</label>
+        <input type="text" id="hint3" name="hint3" required />
+        <button type="button" onclick="checkAnswer('hint3', 'mystery')" class="checkButton">
+          Check
+        </button>
+        <span id="hint3Result"></span>
+
+        <!-- Puzzle 4 -->
+        <label for="hint4">Enter fourth set of letters:</label>
+        <input type="text" id="hint4" name="hint4" required />
+        <button type="button" onclick="checkAnswer('hint4', 'tcs')" class="checkButton">
+          Check
+        </button>
+        <span id="hint4Result"></span>
+
+        <!-- Puzzle 5 -->
+        <label for="hint5">Enter fifth set of letters:</label>
+        <input type="text" id="hint5" name="hint5" required />
+        <button type="button" onclick="checkAnswer('hint5', 'treasure')" class="checkButton">
+          Check
+        </button>
+        <span id="hint5Result"></span>
+
+        <input type="submit" value="Submit" class="submitButton" />
+      </form>
     </section>
     <!-- Hero Section End -->
-   
+
     <!-- What Section Start -->
-    <section id="what" class="section about" style=" padding-top: 0px;">
+    <!-- <section id="what" class="section about" style=" padding-top: 0px;">
       <div class="container">
         <div style="padding: 50px;">
           <h1 style="text-align: center;">Rules And Instructions</h1>
@@ -157,9 +214,9 @@
                     <li>Solve all the questions within 30 mins and you will be able to access the second part of the round early.</li>
                     <li>Everyone will be provided the website files for the second part of the round after 30 mins.</li>
                     <li>The second part consists of developing a website.</li>
-                    <!-- <li>A program will be considered wrong if it fails to work on one or more of the test cases.</li> -->
-                    <!-- <li>A correct program will be awarded the full points, and an incorrect one zero.</li> -->
-                    <li>The team which develops the website first is ranked number 1 on the leader board and the next team(s) receive the immediately following ranking number.</li>
+                    <!<li>A program will be considered wrong if it fails to work on one or more of the test cases.</li> -->
+    <!-- <li>A correct program will be awarded the full points, and an incorrect one zero.</li> -->
+    <!-- <li>The team which develops the website first is ranked number 1 on the leader board and the next team(s) receive the immediately following ranking number.</li>
                 
                     <li>Internet access is allowed only for 1st round (Puzzle round).</li>
                     <li>Internet access is not allowed only for 2st round (Website development).</li>
@@ -172,54 +229,66 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
     <!-- What Section End -->
     <style>
-    
-    
       .module-border-wrap123 {
         max-width: auto;
         padding: 1rem;
         position: relative;
-        background: linear-gradient(180deg,#db4437,#4285f4 32.81%,#00ab47 66.15%,#ffba00);
+        background: linear-gradient(
+          180deg,
+          #db4437,
+          #4285f4 32.81%,
+          #00ab47 66.15%,
+          #ffba00
+        );
         padding: 3px;
       }
-      
+
       .module234 {
         background: white;
         color: black;
         padding: 2rem;
       }
-      </style>
+    </style>
     <!-- Venue Section End -->
     <!-- Footer Section Start -->
-    <section class="footer section" style="background-color: #182559;">
-      <div class="container">
-        <div class="row justify-content-center" style="padding-bottom: 30px;">
-          <div class="col-lg-6 text-center">
+    <section
+      class="footer section"
+      style="margin-top: 25px; background-color: #182559"
+    >
+      <div
+        class="container"
+        <!--
+        <div
+        class="row justify-content-center"
+        style="padding-bottom: 30px"
+      >
+        -->
+        <!-- <div class="col-lg-6 text-center">
             <img src="images/icons/invento.png" style="width: 190px; padding-right: 20px;">
             <img src="images/icons/CodeFellas - Side.png"  style="width: 300px">
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
 
-        <div class="row justify-content-center"> 
+        <div class="row justify-content-center">
           <div class="col-lg-6 text-center">
-            <p class="mt-1 text-white" style="font-size: 15px;">Declare variables not war,  execute programs not people.</p>
-            
-           
-          </div>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-12 text-center mt-5">
-            <p class="copy border-top pt-4 text-white mb-0">
-              Designed with ❤️ by team <a style="color: var(--color1);" href="https://codefellas.tech" target="_blank" rel="noopener noreferrer">Code Fellas</a> 
+            <p class="mt-1 text-white" style="font-size: 18px">
+              "Good luck, everyone! Have fun searching for treasure!"
             </p>
           </div>
         </div>
+
+        <!-- <div class="row"> -->
+        <!-- <div class="col-lg-12 text-center mt-5">
+            <p class="copy border-top pt-4 text-white mb-0">
+              Designed with ❤️ by team <a style="color: var(--color1);" href="#" target="_blank" rel="noopener noreferrer">Code Fellas</a> 
+            </p>
+          </div>
+        </div> -->
       </div>
     </section>
-    <!-- Footer Section End -->
 
     <!-- 
     Essential Scripts
@@ -245,5 +314,4 @@
 
     <script src="js/script.js"></script>
   </body>
-
 </html>
